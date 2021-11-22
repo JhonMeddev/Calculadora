@@ -1,6 +1,5 @@
 package Calculadora;
 
-import java.security.DigestInputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,13 +9,12 @@ public class Divisao implements ICalcJava{
     public void fazerDivisao() 
     {
         String x;
-        double divTotal;
         Scanner kb = new Scanner(System.in);
         ArrayList<Double> divisao = new ArrayList<>();
        
        do
        {
-            System.out.println("insira um numero ou tecle '=' para fazer a SUBTRAÇÃO!: ");
+            System.out.println("insira um numero ou tecle '=' para fazer a DIVISAO!: ");
             x = kb.next();
             if(x.equals("="))
             {
@@ -30,23 +28,15 @@ public class Divisao implements ICalcJava{
        }while(! x.equals("="));
        
        double div1 = divisao.get(0);
-       double divi=0;
-       for(int i = 0 ; i < divisao.size() ; i++)
+
+       for(int i = 1 ; i < divisao.size() ; i++)
        {
-            divi += divisao.get(i);
+            div1 /= divisao.get(i);
            
         
        }
-       if(div1 < 0)
-       {
-            System.out.println("Opcao Invalida");
-            divTotal =0;
-       }
-       else{
-            divTotal = (div1) / (divi);
-       }
-       System.out.println("subtracao dos numeros :" + divisao.toString());
-       System.out.println("e igual a: " + divTotal);
+       System.out.println("A divisao dos numeros :" + divisao.toString());
+       System.out.println("e igual a: " + div1);
 
     }
 
