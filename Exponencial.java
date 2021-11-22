@@ -3,30 +3,25 @@ package Calculadora;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Multiplicacao implements ICalcJava{
+public class Exponencial implements ICalcJava {
+    
     Scanner kb = new Scanner(System.in);
     String x;
-    double multTotal;
-
+    double result;
+    
     @Override
     public void fazerDivisao() {
         // TODO Auto-generated method stub
         
     }
-
     @Override
     public void fazerExponencial() {
-        // TODO Auto-generated method stub
-        
-    }
 
-    @Override
-    public void fazerMultiplica() {
-        ArrayList<Double> multiplicacao = new ArrayList<>();
+        ArrayList<Double> exponencial = new ArrayList<>();
        
         do
         {
-             System.out.println("insira um numero ou tecle '=' para fazer a SUBTRAÇÃO!: ");
+             System.out.println("insira um numero ou tecle '=' para fazer a EXPONENCIAÇÃO!: ");
              x = kb.next();
              if(x.equals("="))
              {
@@ -34,41 +29,41 @@ public class Multiplicacao implements ICalcJava{
              }
              else
              {
-                 multiplicacao.add(Double.parseDouble(x));
+                 exponencial.add(Double.parseDouble(x));
              }
  
         }while(! x.equals("="));
         
-        double mult1 = multiplicacao.get(0);
-        double multiplica=1;
-        for(int i = 1 ; i < multiplicacao.size() ; i++)
-        {
-             multiplica *= multiplicacao.get(1);    
-         
-        }
-        multTotal = (mult1)*(multiplica);
+        double num = exponencial.get(0);
+        double exponente = exponencial.get(1);
 
-        System.out.println("subtracao dos numeros :" + multiplicacao.toString());
-        System.out.println("e igual a: " + multTotal);
+        result = Math.pow(num, exponente);
+
+        System.out.println("Exponencial dos numeros :" + exponencial.toString());
+        System.out.println("e igual a: " + result);
         
     }
-
+    @Override
+    public void fazerMultiplica() {
+        // TODO Auto-generated method stub
+        
+    }
     @Override
     public void fazerRaiz() {
         // TODO Auto-generated method stub
         
     }
-
     @Override
     public void fazerSoma() {
         // TODO Auto-generated method stub
         
     }
-
     @Override
     public void fazerSubtracao() {
         // TODO Auto-generated method stub
         
     }
+
     
+
 }
