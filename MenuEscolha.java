@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class MenuEscolha {
     
     Scanner kb = new Scanner(System.in);
+    boolean keepGoing = true;
 
     public void menuEscolha()
     {
-        boolean keepGoing = true;
+        
         while(keepGoing)
         {
             System.out.println("Calculadora Simples");
@@ -20,28 +21,34 @@ public class MenuEscolha {
             if(x.equals("adicao"))
             {
                 new Soma().fazerSoma();
+                sair();
             }
 
             else if(x.equals("subtracao"))
             {
                 new Subtracao().fazerSubtracao();
+                sair();
             }
 
             else if(x.equals("multiplicacao"))
             {
                 new Multiplicacao().fazerMultiplica();
+                sair();
             }
             else if(x.equals("divisao"))
             {
                 new Divisao().fazerDivisao();
+                sair();
             }
             else if(x.equals("potencia"))
             {
                 new Exponencial().fazerExponencial();
+                sair();
             }
             else if(x.equals("raiz"))
             {
                 new Raiz().fazerRaiz();
+                sair();
             }
             else if(x.equals("sair"))
             {
@@ -56,6 +63,20 @@ public class MenuEscolha {
             }
 
         }
+    }
+
+    public void sair()
+    {
+        System.out.println("Deseja sair ou continuar: 's' ou 'n' ");
+                String yn = kb.next();
+                if(yn.equals("s"))
+                {
+                    keepGoing = false;
+                }
+                else
+                {
+                    menuEscolha();
+                }
     }
     
 }
