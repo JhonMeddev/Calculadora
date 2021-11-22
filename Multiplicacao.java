@@ -39,23 +39,16 @@ public class Multiplicacao implements ICalcJava{
  
         }while(! x.equals("="));
         
-        double mult1 = multiplicacao.get(0);
-        double multiplica=0;
-        for(int i = 1 ; i < multiplicacao.size() ; i++)
+        
+        double multiplica=1;
+        for(int i = 0 ; i < multiplicacao.size() ; i++)
         {
-             multiplica += multiplicacao.get(i);
+             multiplica *= multiplicacao.get(i);
             
          
         }
-        if(mult1 < 0)
-        {
-             multTotal =  (multiplica) * (mult1);
-        }
-        else{
-             multTotal = (mult1) * (multiplica);
-        }
         System.out.println("subtracao dos numeros :" + multiplicacao.toString());
-        System.out.println("e igual a: " + multTotal);
+        System.out.println("e igual a: " + multiplica);
         
     }
 
