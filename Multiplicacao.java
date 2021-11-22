@@ -26,7 +26,7 @@ public class Multiplicacao implements ICalcJava{
        
         do
         {
-             System.out.println("insira um numero ou tecle '=' para fazer a SUBTRAÇÃO!: ");
+             System.out.println("insira um numero ou tecle '=' para fazer a MULTIPLICACAO: ");
              x = kb.next();
              if(x.equals("="))
              {
@@ -39,17 +39,16 @@ public class Multiplicacao implements ICalcJava{
  
         }while(! x.equals("="));
         
-        double mult1 = multiplicacao.get(0);
+        
         double multiplica=1;
-        for(int i = 1 ; i < multiplicacao.size() ; i++)
+        for(int i = 0 ; i < multiplicacao.size() ; i++)
         {
-             multiplica *= multiplicacao.get(1);    
+             multiplica *= multiplicacao.get(i);
+            
          
         }
-        multTotal = (mult1)*(multiplica);
-
-        System.out.println("subtracao dos numeros :" + multiplicacao.toString());
-        System.out.println("e igual a: " + multTotal);
+        System.out.println("Multiplicacao dos numeros :" + multiplicacao.toString());
+        System.out.println("e igual a: " + multiplica);
         
     }
 

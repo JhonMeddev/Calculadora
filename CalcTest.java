@@ -3,7 +3,8 @@ package Calculadora;
 public class CalcTest {
     public static void main(String[] args)
     {
-        new Exponencial().fazerExponencial();
+        new Multiplicacao().fazerMultiplica();
+        new Divisao().fazerDivisao();
         
     }
 }
