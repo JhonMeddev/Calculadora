@@ -45,7 +45,7 @@ public class Subtracao implements ICalcJava
        
        do
        {
-            System.out.println("insira um numero ou tecle '=' para fazer a SUBTRAÇÃO: ");
+            System.out.println("insira um numero ou tecle '=' para fazer a SUBTRAÇÃO!: ");
             x = kb.next();
             if(x.equals("="))
             {
