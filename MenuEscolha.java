@@ -11,8 +11,8 @@ public class MenuEscolha {
         boolean keepGoing = true;
         while(keepGoing)
         {
-            System.out.println("Calculadora Jhon e Joao");
-            System.out.println("Qual das seguintes operacoes deseja realizar ou digite 'sair' para encerrar");
+            System.out.println("Calculadora Simples");
+            System.out.println("Qual das seguintes operacoes deseja realizar, digite 'sair' para encerrar");
             System.out.println("Adicao, \nSubtracao, \nMultiplicacao, \nDivisao, \nPotencia e \nRaiz");
             String x = kb.next().toLowerCase();
             System.out.print("\033[H\033[2J");
